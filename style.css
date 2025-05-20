@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 400 700 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body, html {
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 5fr;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #1197ff;
+  height: 100%;
+  color: white;
+  display: grid;
+  grid: auto auto 1fr / 1fr;
+  row-gap: 70px;
+  grid-row: 1 / -1;
+}
+
+.sidebar > * {
+  grid-column: 1 / -1;
+}
+
+.sidebar-header {
+  height: min-content;
+  margin: 30px 0 0 0;
+}
+
+.sidebar-header,
+.sidebar-main li, 
+.sidebar-footer li  {
+  display: grid;
+  grid: 1fr / 2fr 4fr;
+}
+
+.sidebar svg,
+.sidebar-main li svg, 
+.sidebar-footer li svg {
+ grid-column: 1 / 2;
+ justify-self: center;
+ align-self: center;
+}
+
+.sidebar h2,
+.sidebar-main li h3, 
+.sidebar-footer li h3 {
+  grid-column: 2 / -1;
+  align-self: center;
+}
+
+.sidebar-header svg {
+  fill: white;
+  min-width: 30px;
+  width: 45px;
+}
+
+.sidebar-main svg,
+.sidebar-footer svg  {
+  fill: white;
+  min-width: 20px;
+  width: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: grid;
+  row-gap: 20px;
+}
+
+h2, h3, ul, p, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  grid-column: 2 / -1;
+  display: grid;
+  grid: 1fr 1fr / 1fr;
+  height: min-content;
+}
+
+.header-top {
+  display: grid;
+  grid: 1fr / 2fr 1fr;
+  height: min-content;
+}
+
+.search-bar {
+  display: grid;
+  grid: 1fr / 1fr 6fr;
+  align-items: center;
+}
+
+.search-bar svg,
+.user-section svg,
+.main svg {
+  width: 25px;
+  fill: black;
+}
+
+.search-bar svg {
+  justify-self: center;
+}
+
+.search-bar input {
+  justify-self: start;
+  height: 23px;
+  width: 75%;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+}
+
+.user-section {
+  display: grid;
+  grid: 1fr / 1fr 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-section img,
+.user img {
+  width: 50px;
+}
+
+.greeting-block img {
+  width: 80px;
+}
+
+.header-bottom {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  height: min-content;
+  align-items: center;
+}
+
+.greeting-block {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.greeting-block div {
+  justify-self: baseline;
+}
+
+.button-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.button-block button {
+  height: 35px;
+  background-color: #1197ff;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  width: 65%;
+}
+
+.main {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 4fr 1.5fr;
+  padding-left: 20px;
+  padding-top: 30px;
+  height: min-content;
+}
+
+.main .your-projects-section {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  display: grid;
+  grid: auto 1fr / 1fr;
+}
+
+.projects {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-right: 15px;
+  align-content: baseline;
+}
+
+.projects-heading {
+  grid-column: 1 / 2;
+  margin-bottom: 15px;
+  grid-row: 1 / 2;
+}
+
+.project {
+  background-color: white;
+  border-left: 8px solid orange;
+  display: grid;
+  border-radius: 10px;
+  padding: 0 15px;
+  height: 13rem;
+}
+
+.project h4 {
+  grid-column: 1 / -1;
+  align-self: end;
+  height: min-content;
+}
+
+.project span {
+  grid-column: 1 / -1;
+  color: #2a2a2a;
+}
+
+.project .actions {
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
+  justify-self: end;
+  margin-right: 20px;
+  gap: 20px;
+}
+
+.announcement-heading,
+.trending-heading {
+  margin-bottom: 15px;
+}
+
+.announcements,
+.trending {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  height: min-content;
+}
+
+.announcement h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.announcement span {
+  font-size: 0.75rem;
+  color: darkslategray;
+}
+
+.announcements hr {
+  margin: 1em 0;
+  color: darkslategrey;
+}
+
+.user img {
+  border-radius: 30px;
+}
+
+.main-sidebar {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid: repeat(2, 1fr) / 1fr;
+  margin: 0 30px 0 15px;
+  gap: 17px;
+  height: min-content;
+}
+
+.trending-section {
+  max-height: min-content;
+}
+
+.trending {
+  display: grid;
+  gap: 10px;  
+  height: min-content;
+}
+
+.user {
+  display: grid;
+  grid: 1fr / auto 1fr;
+  gap: 20px;
+}
+
+.user div {
+  display: grid;
+  grid: 1fr 1fr / 1fr;
+}
+
+.user h6 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.user span {
+  font-size: 0.7rem;
+}
+
